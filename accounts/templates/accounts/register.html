@@ -1,0 +1,23 @@
+{% extends 'accounts/master.html' %}
+{% load widget_tweaks %}
+{% block content %}
+    <form action="" method = "POST">
+        {% csrf_token %}
+
+        <!-- loop pat pee attribute twy a kone htote -->
+        {% for input in form %}        
+            <div class="mb-3">
+                {{input.label}}
+                {{input|add_class:'form-control'}}
+                <div class="text-danger">{{input.errors}}</div>
+            </div>
+        {% endfor %} 
+        
+        <!-- ko lo chin tae field ko ta khu chin ce htote
+        {{form.username.label}}
+        {{form.username}}
+        -->
+          
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+{% endblock content %}

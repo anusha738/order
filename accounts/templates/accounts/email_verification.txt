@@ -1,0 +1,5 @@
+Hello,
+ Please click on the link below to verify your email address and activate your account:
+ {{verification_link}}
+ Thank you,
+The Example Team
